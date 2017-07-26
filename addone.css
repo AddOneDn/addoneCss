@@ -1,0 +1,211 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*display: flex;
+    min-height: 100vh;
+    margin: 0;*/
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+/* 垂直居中 */
+.ao-container-flex{
+    margin: auto;
+}
+/* 容器 */
+.ao-container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* 栅栏布局 */
+.ao-grid-container { 
+	max-width: 800px;
+	margin: 0 auto; 
+}
+.ao-grid-container:after,
+.ao-row:after, 
+.ao-col:after, 
+.ao-clr:after, 
+.ao-group:after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+.ao-row { 
+    padding-bottom: 0em;
+}
+.ao-col { 
+	display: block;
+	float: left;
+	width: 100%;
+}
+/* 固定底部导航 */
+.ao-nav-bottom{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1030;
+    border:1px solid transparent;
+}
+/* 横向列表 */
+.ao-breadcrumb{
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+.ao-breadcrumb>li{
+    display: inline-block;
+}
+/* 横向列表间的斜线 */
+.ao-breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+/* hover表格 
+    结构
+    table
+        thead
+            tr
+                th
+                th
+        tbody
+            tr
+                th
+                th
+*/
+.ao-table{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.ao-table>thead>tr>th{
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.ao-table>tbody>tr>th ,.ao-table>thead>tr>th{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.ao-table>tbody>tr:hover{
+    background-color: rgb(245,245,245);
+}
+/* 缩略图组件 */
+.ao-thumbnail{
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.ao-thumbnail>img, .ao-thumbnail a>img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.ao-thumbnail .ao-caption{
+    padding: 9px;
+    color: #333;
+}
+/* 巨幕 */
+.ao-jumbotron{
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+.ao-jumbotron h1, .ao-jumbotron .h1{
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 20px;
+    margin: .67em 0;
+    margin-bottom: 10px;
+}
+.ao-jumbotron{
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+p{
+    margin: 0 0 10px;
+}
+table{
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+}
+ul,ol{
+    margin-top:0px;
+    margin-bottom: 10px;
+}
+img{
+    vertical-align: middle;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* 适配 */
+@media (min-width: 768px){
+    .ao-container{
+        width:750px;
+    }
+    .jumbotron {
+        padding: 48px 0;
+    }
+    .jumbotron h1, .jumbotron .h1 {
+        font-size: 63px;
+    }
+    .ao-gutters .ao-col {
+		margin-left: 2%;
+	}
+	.ao-gutters .ao-col:first-child { 
+		margin-left: 0; 
+	}
+}
+@media ( min-width : 768px ) {
+	.span_1 { width: 8.33333333333%; }
+	.span_2 { width: 16.6666666667%; }
+	.span_3 { width: 25%; }
+	.span_4 { width: 33.3333333333%; }
+	.span_5 { width: 41.6666666667%; }
+	.span_6 { width: 50%; }
+	.span_7 { width: 58.3333333333%; }
+	.span_8 { width: 66.6666666667%; }
+	.span_9 { width: 75%; }
+	.span_10 { width: 83.3333333333%; }
+	.span_11 { width: 91.6666666667%; }
+	.span_12 { width: 100%; }
+	
+	.gutters .span_1 { width: 6.5%; }
+	.gutters .span_2 { width: 15.0%; }
+	.gutters .span_3 { width: 23.5%; }
+	.gutters .span_4 { width: 32.0%; }
+	.gutters .span_5 { width: 40.5%; }
+	.gutters .span_6 { width: 49.0%; }
+	.gutters .span_7 { width: 57.5%; }
+	.gutters .span_8 { width: 66.0%; }
+	.gutters .span_9 { width: 74.5%; }
+	.gutters .span_10 { width: 83.0%; }
+	.gutters .span_11 { width: 91.5%; }
+	.gutters .span_12 { width: 100%; }
+}
