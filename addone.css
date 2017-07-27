@@ -505,6 +505,146 @@ nav ul, nav ol{
     margin: 0;
     list-style: none;
 }
+/* 动画 */
+.cp-spinner {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+}
+.cp-round:before {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px #bababa;
+    border-right: solid 6px #bababa;
+    border-bottom: solid 6px #bababa;
+    border-left: solid 6px #bababa;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cp-round:after {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px #f56151;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 6px transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cp-round-animate 1s ease-in-out infinite;
+}
+.cp-bubble {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #58bd55;
+    animation: cp-bubble-animate 1s linear infinite;
+}
+.cp-bubble:before {
+    border-radius: 50%;
+    content: " ";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #58bd55;
+    position: absolute;
+    left: -30px;
+    animation: cp-bubble-animate-before 1s ease-in-out infinite;
+}
+.cp-bubble:after {
+    border-radius: 50%;
+    content: " ";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #58bd55;
+    position: absolute;
+    right: -30px;
+    animation: cp-bubble-animate-after 1s ease-in-out infinite;
+}
+.cp-heart {
+    animation: cp-heart-animate 2s ease-in-out infinite;
+}
+.cp-heart:before {
+    border-radius: 12px 12px 0 0;
+    content: " ";
+    width: 24px;
+    height: 35px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #eb68a1;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+.cp-heart:after {
+    border-radius: 12px 12px 0 0;
+    content: " ";
+    width: 24px;
+    height: 35px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #eb68a1;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+.cp-meter {
+    border-radius: 50%;
+    border-top: solid 6px #0fd6ff;
+    border-right: solid 6px #0fd6ff;
+    border-bottom: solid 6px #0fd6ff;
+    border-left: solid 6px #0fd6ff;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.cp-meter:before {
+    border-radius: 3px;
+    content: " ";
+    width: 6px;
+    height: 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #0fd6ff;
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    transform-origin: center bottom;
+    animation: cp-meter-animate-before 1s linear infinite;
+}
+.ao-mask{       
+    position: absolute;
+    top: 0px;
+    filter: alpha(opacity=60);
+    background-color: #777;     
+    z-index: 1002; left: 0px;     
+    height:100vh;
+    width:100%;
+    opacity:0.5; -moz-opacity:0.5;     
+}
+@keyframes cp-meter-animate-before{0%{transform:rotate(-45deg)}100%{transform:rotate(315deg)}}
+@keyframes cp-heart-animate{0%{transform:scale(.9);transform-origin:center}15%{transform:scale(1.4);transform-origin:center}30%{transform:scale(.9);transform-origin:center}45%{transform:scale(1.4);transform-origin:center}100%,60%{transform:scale(.9);transform-origin:center}}
+@keyframes cp-bubble-animate{0%{opacity:.5;transform:scale(1) translateX(0)}25%{opacity:1;transform:scale(1.1) translateX(-15px)}50%{opacity:1;transform:scale(1.2) translateX(15px)}100%{opacity:.5;transform:scale(1) translateX(0)}}@keyframes cp-bubble-animate-before{0%{opacity:.5;transform:scale(1)}25%{transform:scale(1.1)}100%,50%{opacity:1;transform:scale(1)}}@keyframes cp-bubble-animate-after{0%,50%{opacity:.5;transform:scale(1)}50%{transform:scale(1.1)}100%,75%{opacity:1;transform:scale(1)}}
+@keyframes cp-round-animate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
 .w5 {width: 5%;}
 .w10 {width: 10%;}
 .w15 {width: 15%;}
